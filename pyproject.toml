@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "financial-intelligence-lab"
+version = "0.1.0"
+description = "Deterministic synthetic P&L and financial BI fundamentals"
+requires-python = ">=3.10"
+dependencies = ["pandas>=2.0,<3.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7,<10"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
